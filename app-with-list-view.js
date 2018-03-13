@@ -18,7 +18,7 @@ new Vue({
             <stack-layout>
                 <button class="btn btn-primary" :text="subreddit" @tap="chooseSubreddit"></button>
                 <list-view :items="items" class="list-group" :templateSelector="templateSelector" @itemTap="onItemTap">
-                    <template scope="item">
+                    <v-template scope="item">
                         <stack-layout orientation="horizontal" class="list-group-item">
                             <image :src="item.image" class="thumb"></image>
                             <stack-layout>
@@ -26,8 +26,8 @@ new Vue({
                                 <label class="list-group-item-text" text="The rest of the content" textWrap="true"></label>
                             </stack-layout>
                         </stack-layout>
-                    </template>
-                    <template name="active" scope="item">
+                    </v-template>
+                    <v-template name="active" scope="item">
                         <stack-layout orientation="horizontal" class="list-group-item active">
                             <image :src="item.image" class="thumb"></image>
                             <stack-layout>
@@ -35,7 +35,7 @@ new Vue({
                                 <label class="list-group-item-text" text="The rest of the content" textWrap="true"></label>
                             </stack-layout>
                         </stack-layout>
-                    </template>
+                    </v-template>
                 </list-view>
             </stack-layout>
         </page>
